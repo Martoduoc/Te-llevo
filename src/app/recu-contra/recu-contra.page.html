@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Recuperar Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form (ngSubmit)="recoverPassword()" recoverForm="ngForm">
+        <ion-item>
+          <ion-label position="floating">Correo asociado a la cuenta</ion-label>
+          <ion-input [(ngModel)]="email" name="email" type="email" required #emailInput="ngModel"></ion-input>
+        </ion-item>
+        <ion-note *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)" color="danger">
+          <div *ngIf="emailInput.errors?.['required']">El correo es obligatorio.</div>
+        </ion-note>
+        
+        <ion-button expand="block" type="submit">Recuperar Contraseña</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
