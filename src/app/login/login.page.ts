@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class LoginPage implements OnInit {
     email: string = '';
     password: string = '';
+    showPassword: boolean = false;
 
     private users: { email: string, password: string }[] = [];
 
@@ -21,19 +22,26 @@ export class LoginPage implements OnInit {
 
   }
 
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
+  }
 
   login() {
+    console.log("Intentando iniciar sesión con:", this.email, this.password);
+  
     if (this.email && this.password) {
-
       const user = this.users.find(u => u.email === this.email && u.password === this.password);
+      console.log("Usuario encontrado:", user);
+  
       if (user) {
         localStorage.setItem('currentUser', JSON.stringify(user));
-        // Navegar a la página de perfil
         this.router.navigate(['/menu']);
+        console.log("Redirigiendo a menú...");
       } else {
-        // Mostrar mensaje de error o alerta
         alert('Correo o contraseña incorrectos.');
       }
+    } else {
+      alert('Por favor, ingresa el correo y la contraseña.');
     }
   }
 }

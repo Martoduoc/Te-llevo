@@ -1,0 +1,44 @@
+ion-content{
+    --background: rgb(213,187,151)
+}
+
+ion-toolbar {
+    --background: rgb(175, 143, 100)
+  }
+  
+ion-back-button {
+    color: rgb(255, 255, 255);
+  }
+
+ion-card-title {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.custom-button {
+    --background-activated: rgb(161, 134, 103); 
+    --background: rgb(175, 143, 100);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 650;
+    width: 300px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    margin-left: auto;  
+    margin-right: auto;  
+}
+
+.card {
+    margin-top: 20px;
+    height: auto;
+}
+
+.requisitos-contraseña {
+    margin-top: 12px;
+    color: #525252;
+}
+
+.labels {
+    margin-top: 20px;
+    color: #525252;
+}

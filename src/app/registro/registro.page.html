@@ -1,14 +1,13 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button default-href="#"></ion-back-button>
+      <ion-back-button default-href="#" text="Volver"></ion-back-button>
     </ion-buttons>
-    <ion-title>Creemos una cuenta!</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card>
+  <ion-card class="card">
     <ion-card-header>
       <ion-card-title>Creemos una cuenta!</ion-card-title>
     </ion-card-header>
@@ -17,7 +16,7 @@
       <form (ngSubmit)="registerUser()" #registerForm="ngForm">
         
         <ion-item>
-          <ion-label position="floating">Nombre</ion-label>
+          <ion-label position="floating" class="labels">Nombre</ion-label>
           <ion-input [(ngModel)]="name" name="name" type="text" required #nameInput="ngModel"></ion-input>
         </ion-item>
         <ion-note *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)" color="danger">
@@ -25,7 +24,7 @@
         </ion-note>
 
         <ion-item>
-          <ion-label position="floating">Apellido</ion-label>
+          <ion-label position="floating" class="labels">Apellido</ion-label>
           <ion-input 
             [(ngModel)]="surname" 
             name="surname" 
@@ -39,7 +38,7 @@
         </ion-note>
 
         <ion-item>
-          <ion-label position="floating">RUT</ion-label>
+          <ion-label position="floating" class="labels">RUT</ion-label>
           <ion-input 
             [(ngModel)]="rut" 
             name="rut" 
@@ -53,7 +52,7 @@
         </ion-note>
         
         <ion-item>
-          <ion-label position="floating">Correo</ion-label>
+          <ion-label position="floating" class="labels">Correo</ion-label>
           <ion-input 
             [(ngModel)]="email" 
             name="email" 
@@ -67,7 +66,7 @@
         </ion-note>
 
         <ion-item>
-          <ion-label position="floating">Contraseña</ion-label>
+          <ion-label position="floating" class="labels">Contraseña</ion-label>
           <ion-input 
             [(ngModel)]="password" 
             name="password" 
@@ -80,13 +79,13 @@
           La contraseña es obligatoria.
         </ion-note>
 
-        <p> * La contraseña debe tener:</p>
-        <p>- Al menos 8 caracteres</p>
-        <p>- Al menos 1 número</p>
-        <p>- Al menos 1 mayúscula</p>
-        <p>- Al menos 2 símbolos</p>
+        <p class="requisitos-contraseña"> * La contraseña debe tener:</p>
+        <p class="requisitos-contraseña">- Al menos 8 caracteres</p>
+        <p class="requisitos-contraseña">- Al menos 1 número</p>
+        <p class="requisitos-contraseña">- Al menos 1 mayúscula</p>
+        <p class="requisitos-contraseña">- Al menos 2 símbolos</p>
                
-        <ion-button expand="full" type="submit" color="primary">Registrar</ion-button>
+        <ion-button expand="block" type="submit" class="custom-button">Registrar</ion-button>
       </form>
     </ion-card-content>
   </ion-card>

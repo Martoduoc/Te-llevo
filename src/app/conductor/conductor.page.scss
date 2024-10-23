@@ -1,0 +1,26 @@
+ion-content {
+    --background: rgba(213,187,151)
+  }
+
+ion-back-button {
+    color: #ffffff;
+}
+
+.tool-bar {
+    --background: rgb(175, 143, 100);
+    color: #ffffff;
+}
+
+.map-container {
+    display: flex; 
+    justify-content: center;  
+    align-items: center;  
+    height: 700px;  
+    margin-top: 100px;
+}
+
+#map {
+    width: 90%;  
+    height: 400px;  
+    border: 12px solid rgba(213,187,151);  
+}
