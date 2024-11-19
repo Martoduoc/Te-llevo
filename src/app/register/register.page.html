@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()"> <!-- Botón de volver -->
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="padding-left: 115px;">Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="register-container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Crea tu cuenta</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <form (ngSubmit)="submitRegisterForm()">
+          <ion-item>
+            <ion-label position="floating">Correo Electrónico</ion-label>
+            <ion-input
+              type="email"
+              [(ngModel)]="registerData.email"
+              name="email"
+              required
+            ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input
+              [type]="showPassword ? 'text' : 'password'"
+              [(ngModel)]="registerData.password"
+              name="password"
+              required
+            ><ion-icon  class="ojo"slot="end"[name]="showPassword ? 'eye-off-outline' : 'eye-outline'" (click)="showPassword = !showPassword" style="cursor: pointer;" ></ion-icon></ion-input> 
+          </ion-item>
+
+          <ion-button
+            expand="block"
+            type="submit"
+            color="primary"
+            [disabled]="isLoading"
+          >
+            <ion-spinner *ngIf="isLoading" name="lines-small"></ion-spinner>
+            <span *ngIf="!isLoading">Registrar</span>
+          </ion-button>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

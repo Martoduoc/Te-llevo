@@ -2,29 +2,31 @@ ion-content {
   display: flex; 
   flex-direction: column; 
   justify-content: flex-end; 
-  background-image: url('/assets/icon/mapa.jpg');
-  background-size: cover; 
+  background-image: url('/assets/icon/dalomismo.gif'); 
+  
   background-position-x: 0px; 
   background-position-y: 0px; 
-  background-repeat: no-repeat;
-  --background: linear-gradient(180deg, rgba(221,211,179,0.4) 20%, rgba(213,187,151,1) 80%);
+  --background: linear-gradient(1deg, #b6c9ec6c, #2a529864);
   
 }
 .tellevo {
   text-align: center;
   height: 90px;
   width: 400px;
-  margin-top: 100px;
+  margin-top: 200px;
   margin-left: auto;  
   margin-right: auto; 
-  color: #000000;
+  color: #ffffff;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 100px;
   font-weight: 790;
-  text-shadow: 0 0 25px rgb(175, 143, 100); 
+  text-shadow: 0 0 25px #ffffff; 
 
 }
 
+.parrafo {
+  font-size: 5rem;
+}
 .celular {
   width: 100%;
   height: auto;
@@ -41,15 +43,13 @@ ion-content {
   width: 300px;
   margin-left: auto;  
   margin-right: auto; 
-  margin-top: 0px;
+  margin-top: 300px;
 }
 
 .custom-button {
-  --background-activated: rgb(161, 134, 103); 
-  --background: rgb(175, 143, 100);
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 600;
+
+ 
+  font-size: 15px;
   width: 300px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }

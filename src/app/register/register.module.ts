@@ -1,16 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
 import { IonicModule } from '@ionic/angular';
-import { RegisterComponent } from './register.component';
+
+import { RegisterPageRoutingModule } from './register-routing.module';
+
+import { RegisterPage } from './register.page';
+
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 @NgModule({
-  declarations: [RegisterComponent],
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule
+    IonicModule,
+    RegisterPageRoutingModule,
+    AngularFireAuthModule
   ],
-  exports: [RegisterComponent]
+  declarations: [RegisterPage]
 })
-export class RegisterModule {}
+export class RegisterPageModule {}

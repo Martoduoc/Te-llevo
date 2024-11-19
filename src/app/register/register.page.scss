@@ -1,0 +1,33 @@
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 16px;
+  }
+
+  
+  ion-content {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-end; 
+    background-image: url('/assets/icon/dalomismo.gif'); 
+    
+    background-position-x: 0px; 
+    background-position-y: 0px; 
+    --background: linear-gradient(1deg, #b6c9ec6c, #2a529864);
+    
+  }
+
+  
+  ion-card-title {
+    text-align: center;
+  }
+  
+  ion-item {
+    margin-bottom: 16px;
+  }
+  
+  ion-button {
+    margin-top: 24px;
+  }

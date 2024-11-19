@@ -1,5 +1,13 @@
 ion-content {
-  --background: rgba(213,187,151)
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-end; 
+  background-image: url('/assets/icon/dalomismo.gif'); 
+  
+  background-position-x: 0px; 
+  background-position-y: 0px; 
+  --background: linear-gradient(1deg, #b6c9ec6c, #2a529864);
+  
 }
 
 ion-card-title {

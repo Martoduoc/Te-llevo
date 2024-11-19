@@ -1,13 +1,35 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>pasajero</ion-title>
+    <ion-back-button slot="start" defaultHref="/menu"></ion-back-button>
+    <ion-title>Viajes disponibles</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">pasajero</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <!-- Verificar si hay datos en la colección -->
+  <ion-list style="background-color: rgba(240, 248, 255, 0);" *ngIf="viajes$ | async as viajes; else noData">
+    <ion-item *ngFor="let viaje of viajes">
+      <ion-label>
+        <h2>Origen: {{ viaje.origen }}</h2>
+        <h3>Destino: {{ viaje.destino }}</h3>
+        <p>Tarifa: {{ viaje.tarifa }}</p>
+        <p>Detalles: {{ viaje.detalles }}</p>
+      </ion-label>
+
+      <!-- Botón para pedir viaje individual -->
+      <ion-button slot="end" (click)="goToDetails(viaje)">Pedir Viaje</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Si no hay datos, mostrar este mensaje -->
+  <ng-template #noData>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>No hay viajes disponibles</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Aún no has creado ningún viaje. ¡Crea uno desde la página de viajes!
+      </ion-card-content>
+    </ion-card>
+  </ng-template>
 </ion-content>

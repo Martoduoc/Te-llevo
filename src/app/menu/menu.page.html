@@ -1,23 +1,18 @@
-
-<ion-menu contentId="main-content" class="custom-menu">
-  <ion-list>
-    <ion-item class="items" routerLink="/perfil">Perfil</ion-item>
-    <ion-item class="items" routerLink="/home">Salir</ion-item>
-  </ion-list>
-</ion-menu>
-
   <ion-content id="main-content">
     <ion-header>
       <ion-toolbar>
-        <ion-buttons slot="start">
+        <ion-buttons slot="end">
           <ion-menu-button class="burger"></ion-menu-button> 
         </ion-buttons>
-      <ion-title class="title">Bienvenido {{ userName }}</ion-title>
+      <ion-title class="title" style="text-align: center;">Bienvenido</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div class="conductor">
-    <ion-button class="boton-conductor" [routerLink]="['/conductor']">Conductor</ion-button>
+    <ion-button class="boton-conductor" style=" color: #fff; text-shadow: 
+    0 0 5px #fff, 
+    0 0 10px #fff, 
+    0 0 15px #fff, " [routerLink]="['/conductor']">Conductor</ion-button>
   </div>
 
   <div class="pasajero">
@@ -26,7 +21,11 @@
 
   <div class="test-content">
     <ion-button class="test" expand="block" fill="clear" shape="round" [routerLink]="['/test']">
-      Test
+      404
+    </ion-button>
+
+    <ion-button class="test" expand="block" fill="clear" shape="round" [routerLink]="['/home']">
+      Salir
     </ion-button>
   </div>
 

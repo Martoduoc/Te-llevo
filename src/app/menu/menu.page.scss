@@ -1,9 +1,18 @@
 ion-content {
-    --background: rgba(213,187,151)
-  }
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-end; 
+  background-image: url('/assets/icon/dalomismo.gif'); 
+  
+  background-position-x: 0px; 
+  background-position-y: 0px; 
+  --background: linear-gradient(1deg, #b6c9ec6c, #2a529864);
+  
+}
 
 ion-toolbar {
-  --background: rgb(175, 143, 100)
+  background-image: url('/assets/icon/dalomismo.gif');
+  --background: linear-gradient(1deg, #b6c9ec6c, #2a529864);
 }
 
 .burger {
@@ -11,7 +20,7 @@ ion-toolbar {
 }
 
 .items {
-  --background: rgb(175, 143, 100);
+  
   color: #ffffff;
   width: 100%;
 }
@@ -21,7 +30,7 @@ ion-toolbar {
 }
 
 .custom-menu {
-  --background: rgb(175, 143, 100);
+  
 }
 
 .test {
@@ -30,10 +39,8 @@ ion-toolbar {
   margin-bottom: 30px;
   margin-top: 30px;
   width: 50%;
-  --background-activated: rgb(161, 134, 103); 
-  --background: rgb(175, 143, 100);
-  --background-focused: rgb(175, 143, 100);
-  --background-hover: rgb(175, 143, 100);
+  --background: rgba(255, 255, 255, 0.129);
+
   color: rgb(255, 255, 255);
   font-size: 20px;
   font-weight: 650;
@@ -41,10 +48,11 @@ ion-toolbar {
 
 .test-content {
   margin-top: 350px;
+  text-shadow: 0px 0px 20px #ffffff;
 }
 
 .boton-conductor {
-  --background: url('/assets/icon/cafe.png');
+  --background: rgba(255, 255, 255, 0.129);
   --background-activated: rgba(161, 134, 103, 0.24);
   --color: #ffffff; 
   height: 150px;
@@ -55,12 +63,14 @@ ion-toolbar {
   margin-left: auto;  
   margin-right: auto; 
   margin-top: 30px;
+  text-shadow: 0px 0px 20px #ffffff;
 }
 
 .boton-pasajero {
-  --background: url('/assets/icon/cafe.png');
+  --background: rgba(255, 255, 255, 0.129);
   --background-activated: rgba(161, 134, 103, 0.24);
   --color: #ffffff;
+  text-shadow: 0px 0px 20px #ffffff;
   height: 150px;
   width: 90%;
   display: flex;
@@ -70,3 +80,27 @@ ion-toolbar {
   margin-right: auto;
   margin-top: 30px;
 }
+
+ion-list{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-end; 
+    background-image: url('/assets/icon/dalomismo.gif'); 
+    
+    background-position-x: 0px; 
+    background-position-y: 0px; 
+    --background: linear-gradient(1deg, #b6c9ec6c, #2a529864);
+}
+
+ion-item{
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-end; 
+  background-image: url('/assets/icon/dalomismo.gif'); 
+  
+  background-position-x: 0px; 
+  background-position-y: 0px; 
+  --background: linear-gradient(1deg, #b6c9ec6c, #2a529864);
+}
+
+

@@ -1,16 +1,26 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './guards/auth.guard';
-import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
-
-  { path: 'register',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule), component: RegisterComponent },
 
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+  },
+  {
+    path: 'mapa',
+    loadChildren: () => import('./mapa/mapa.module').then( m => m.MapaPageModule)
+  },
+
+  {
+    path: 'logear',
+    loadChildren: () => import('./logear/logear.module').then( m => m.LogearPageModule)
+  },
+
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
 
   {
@@ -33,12 +43,11 @@ const routes: Routes = [
   {
     path: 'menu',
     loadChildren: () => import('./menu/menu.module').then(m => m.MenuPageModule),
-    canActivate: [AuthGuard]
   },
   {
     path: 'perfil',
     loadChildren: () => import('./perfil/perfil.module').then(m => m.PerfilPageModule),
-    canActivate: [AuthGuard]
+
   },
   {
     path: 'conductor',
